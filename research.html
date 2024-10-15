@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
+            </script>
+    <script type="text/javascript" src="path-to-mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 150px;
+            text-align: center;
+            background-size: cover;
+            /* background-attachment: fixed;              */
+            background-image: url(./images/bg_research.jpg);
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            margin: 0 0 10px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        nav {
+            margin: 20px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+        }
+        .container {
+            position: relative;
+            padding:80px;
+            background-color: #fff;
+        }
+        .image {
+            position: absolute;
+            right: 0;
+            top: 40px;
+            width: 300px;
+            margin-left: 200px;
+        }
+        .text {
+            position: relative;
+            left: 10px;
+            top: 20;
+            margin-right: 10px;
+        }
+        .ul1 {
+            margin: -70px -80px;
+            padding: 0 10;
+            margin-right: -90px;
+            list-style: none;
+        }
+        .li1:before { 
+            content: "";
+            border-color: transparent #111;
+            border-style: solid;
+            border-width: 0.35em 0 0.35em 0.45em;
+            display: block;
+            height: 0;
+            width: 0;
+            left: -1.5em;
+            top: 0.9em;
+            position: relative;
+        }
+        .column {
+            float: left;
+            width: 30%;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both; display: table;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Research</h1>
+    </header>
+
+    <nav>
+        <a href="./index.html">About</a>
+        <a href="./research.html">Research</a>
+        <a href="./photos.html">Photograph</a>
+        <a href="./anime.html">Anime</a>        
+        <a href="./contact.html">Contact</a>
+    </nav>
+
+    <section id="tnpackages">
+        <h2>Tensor Network</h2>
+            <div class="container">
+                <p class="text">
+                    <ul class='ul1'>
+                        <li class='li1'><a href="https://github.com/jurajHasik/peps-torch">peps-torch</a>: A tensor network library for two-dimensional lattice models by Juraj Hasik, Glen Bigan Mbeng, with contributions by Wei-Lin Tu, Seydou-Samba Diop, Sen Niu, Yi Xu.</li>
+                        <li class='li1'><a href="https://github.com/b1592/ad-peps">ad-peps</a>: Basic implementation of iPEPS ground-state and excited-state optimization using automatic differentiation.</li>
+                    </ul>
+                </p>
+                <!-- <img src="images/tn.png" alt="photo" width="400" class="image"/> -->
+            </div>
+            <img src="./images/tn.png" alt="photo" style="width:50%;margin-left:25%">
+
+    </section>
+
+    <section id="excitations">
+        <h2>Simulating spin dynamics for exotic phases of matter (excitation)</h2>
+
+        <p>Tensor network states (TNS), in particular, the projected entangled-pair states (PEPS), have been used extensively to study the ground state phase diagram of various spin (and fermionic) models on two-dimensional lattices. However, experimentally, it is always hard to directly probe the ground state properties. Therefore, to be able to simulate excitation, e.g., computing dynamical spin structure factor, is crucial in bridging theory with experiment. In general, there are two different approaches to obtain the information about the excitation in terms of PEPS -- one is via the <b>time evolution</b>, as have been commonly used in MPS; the other is via the so-called <b>tangent-space method</b>. I am mainly focusing on the latter. </p>
+
+        <p> In our recent work, motivated by the recent neutron scattering experiments on a quantum Ising magnet K$_2$Co(SeO$_3$)$_2$, we apply our excitation PEPS method to the easy-axis XXZ model on the triangular lattice. From the simulations, we not only find very nice agreement with the experimental data in two energy scales, but also provide straightforward numerical evidence about the multi-spin-flip nature of those observed branches. We expect our method to be straightforwardly generalized to other interesting frustrated spin systems, and are currently working closely with exprimental groups with this technique. </p>
+
+        <p> PS: Here are a few technical aspects. Compared to a previous work <a href="10.1103/PhysRevLett.129.227201">[Chi et al., PRL 129, 227201 (2022)]</a> using coarse-grained PEPS ansatz, our construction of PEPS ansatz turns out to have a MUCH faster convergence with respect to bond dimension. We able able to use $D=3$ to recover their $D=5$ result (e.g., for sublattice spectrum, see <a href="./images/research/comparison_sublat_spec.jpg">here</a>). Also, compared with $1/D$ extrapolation, we believe that $1/\xi$ extrapolation is a more reliable and universal way for finite-bond-dimension scaling analysis. </p>
+
+        <p>[1] <b>YX</b>, Juraj Hasik, Boris Ponsioen, Andriy H. Nevidomskyy. Simulating Spin Dynamics of Supersolid States in a Quantum Ising Magnet. <a href="https://arxiv.org/abs/2405.05151">arXiv:2405.05151</a>.</p>
+    
+    </section>
+    
+    <section id="frustration">
+        <h2>Search for exotic quantum criticality induced by frustration (ground state)</h2>
+        <p>The Landau paradigm about phase transition tells us that the phase transition between two different types of symmetry broken states is of first order. However, this picture can break down when the topological defects become significant, resulting in the well-known scenario of <a href="https://www.science.org/doi/10.1126/science.1091806">deconfined quantum criticality (DQC)</a> (also see <a href="https://arxiv.org/abs/2306.12638">here</a> for a review by T. Senthil). 
+            One representative example of DQC is the VBS-Neel transition in spin-1/2 lattice models.
+             </p>
+
+        <p>Compared with spin-1/2, spin-1 has a bigger Hilbert space, yet not too big so that the spins still behave like quantum objects. As a consequence, spin-1 systems can host more exotic phases such as the ferro-quadrupolar (FQ) state. And one can ask a similar question about the phase transitions -- whether the DQC also applies to some spin-1 models? To explore such possibility, we study a spin-1 coupled-chain model with both biliear and biquadratic interactions. In the decoupled limit and the isotropic limit, the model realizes VBS and Neel AFM order respectively. Hence, by tuning the inter-chain couplings, we can study the phase transitions between the VBS and AFM order. As a result, we argue that both DVBS-AFM and DVBS-FQ phase transitions are of first order based on the hysteresis. And the correlation lengths do not appear to have singular behavior across phase transitions. Therefore, we conclude that the DQC scenario does not apply to this spin-1 model. </p>
+
+        <div class="row">
+            <div class="column">
+                <img src="./images/research/DQCP.png" alt="dqcp" style="width:80%">
+            </div>            
+                <div class="column">
+                <img src="./images/research/spin1_bbh_pd.jpeg" alt="spin1_bbh_pd" style="width:100%">
+            </div>
+        </div>
+        <p></p>
+
+        <p> Another example of exotic quantum criticality is induced by an interplay betwee frustration and magnetic fields. We study the spin-1/2 $J_1-J_2-J_3$ model under external magnetic field, with a focus on the critical behavior near the saturation field. There, the usual picture of phase transition is described by the magnon condensation (BEC). However, when tuning the frustration towards the critical lines (a quantum spin liquid emerging from DQC is reported at zero field), the BEC picture no longer holds as the superfluid weight or transverse magnetization is vanishing. Personally speaking, I think this spin-1/2 model is quite interesting because at limits (zero-field and close-to-saturation), the frustration always plays an crucial role. And I expect there is further work that can be done, e.g., intermediate-field regime, and how the VBS order in the zero-field phase diagram melts as field increases. </p>
+
+        <div class="row">
+            <div class="column">
+                <img src="./images/research/multicrit_nonBEC.png" alt="nonBEC" style="width:100%">
+            </div>
+        </div>
+
+        <p>[1] <b>YX</b>, Tianfu Fu, Juraj Hasik, Andriy H. Nevidomskyy. Quantum Melting of Spin-1 Dimer Solid Induced by Inter-chain Coupling. <a href="https://arxiv.org/abs/2209.09986">arXiv:2209.09986</a>.</p>
+        <p>[2] Shouvik Sur, <b>YX</b>, Shuyi Li, Shou-Shu Gong, Andriy H. Nevidomskyy. Field-Induced Non-BEC Transitions in Frustrated Magnets. <a href="https://link.aps.org/doi/10.1103/PhysRevLett.132.066701">Phys. Rev. Lett. 132, 066701 (2024)</a>.</p>
+
+    </section>
+
+    <section id="su3">
+        <h2>Chiral SU(3) model on kagome lattice</h2>
+        <p>Compared to the SU(2) spins that are studied extensively in the solid state systems, SU(3) spins have more complicated intrinsic algeraic relations governed by the $su(3)$ Lie algebra. While the realization of SU(3) spins seems to be non-trivial or even impossible in condensed matter systems, the continuous progress in ultracold atom platforms brings new possibilities to realize SU(N) physics and to engineer exotic phases of matter. With that aside, as a theorist, such attempts facilitate our understanding in the underlying physics of exotic phases, which may turn out to be useful in the future.</p>
+        <p>To be more specific, in this project, motivated by the search of chiral spin liquids (a bosonic version of FQHE), we studied a chiral SU(3) model on the kagome lattice where frustration also plays an important role. The resulting phase diagram appears to be very rich, including exotic phases like the topological chiral spin liquid and a two-dimensional AKLT-like phase. With a combination of analytical and various numerical techniques, we provide a systematic characterization for all the phases.</p>
+        
+        <div class="row">
+            <div class="column">
+                <img src="./images/research/geomtry_kagome.jpeg" alt="kagome" style="width:80%">
+            </div>            
+            <div class="column">
+                <img src="./images/research/pd_su3_kagome.jpeg" alt="su3kagome_pd" style="width:100%">
+            </div>
+        </div>
+        <p>[1] <b>YX</b>*, Sylvain Capponi*, Ji-Yao Chen*, Laurens Vanderstraeten, Juraj Hasik, Andriy H Nevidomskyy, Matthieu Mambrini, Karlo Penc, Didier Poilblanc. Phase diagram of the chiral SU(3) antiferromagnet on the kagome lattice. <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.195153">Phys. Rev. B 108, 195153 (2023)</a>.</p>
+
+    </section>
+
+    <section id="elec">
+        <h2>Playing with ITensor</h2>
+        <p>I am recently playing with some fermionic models, especially those related to quantum Hall systems, using <a href="https://itensor.org">ITensor</a>. It turns out that with finite DMRG, one can already obtain a few interesting properties for the fractional quantum Hall effect (FQHE), for example, the tower of states corresponding to the $SU(2)_1$ CFT edge spectrum. Given the easy-to-get-started feature of ITensors, it might not be a bad idea to implement the tangent-space-based excitaion MPS with ITensors. </p> 
+        <img src="./images/research/fci_cftspec_su2_1.jpg" alt="cft_su21" style="width:50%" />
+    </section>
+
+
+    <!-- <section id="publication">
+        <h2>Selected Publications</h2>
+        <ul>
+            <li><b>YX</b>*, Sylvain Capponi*, Ji-Yao Chen*, Laurens Vanderstraeten, Juraj Hasik, Andriy H Nevidomskyy, Matthieu Mambrini, Karlo Penc, Didier Poilblanc. Phase diagram of the chiral SU(3) antiferromagnet on the kagome lattice. <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.195153">Phys. Rev. B 108, 195153 (2023)</a>.</li>
+            <li>Shouvik Sur, <b>YX</b>, Shuyi Li, Shou-Shu Gong, Andriy H. Nevidomskyy. Field-Induced Non-BEC Transitions in Frustrated Magnets. <a href="https://link.aps.org/doi/10.1103/PhysRevLett.132.066701">Phys. Rev. Lett. 132, 066701 (2024)</a>.</li>
+        </ul>
+    </section> -->
+
+    <!-- <section id="academic">
+        <h2>Other links</h2>
+        <p><a href="https://scholar.google.com/citations?user=77fKO_kAAAAJ&hl=en">Google Scholar</a>, 
+            <a href="https://github.com/slowlightx">GitHub</a>, <a href="https://orcid.org/0000-0001-7437-9904">ORCID</a></p>
+    </section> -->
+</body>
+</html>

@@ -1,12 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+<script type="text/javascript" src="path-to-mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yi Xu (徐熠)'s Personal Webpage</title>
+    <title>My Personal Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 150px;
+            text-align: center;
+            background-size: cover;
+            /* background-attachment: fixed;              */
+            background-image: url(./images/homepage.jpg);
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            margin: 0 0 10px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        nav {
+            margin: 20px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+        }
+        .container {
+            position: relative;
+            padding:100px;
+            background-color: #fff;
+        }
+        .image {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            width: 150px;
+            margin-right: 200px;
+        }
+        .text {
+            position: absolute;
+            left: 200px;
+            top: 5px;
+            right: 0;
+            margin-left: 5px;
+        }
+        .column {
+            float: left;
+            width: 100%;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both; display: table;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is my personal webpage hosted on GitHub Pages.</p>
+    <header>
+        <h1>Yi Xu's Homepage</h1>
+        <p></p>
+    </header>
+
+    <nav>
+        <a href="./index.html">About</a>
+        <a href="./research.html">Research</a>
+        <a href="./photos.html">Photograph</a>
+        <a href="./anime.html">Anime</a>        
+        <a href="./contact.html">Contact</a>
+    </nav>
+
+    <!-- <img src="images/yixu.jpeg" alt="photo" width="150" margin-left=200px/> -->
+    
+    <section id="about">
+        <h2>About Me</h2>
+         <div class="row">
+            <div class="column">
+              <img src="images/yixu.jpeg" alt="flower" style="width:25%">
+            </div>
+            <div class="column" style="margin-left:30%; margin-top:-25%">
+                <p style="width:70%">Howdy! I am a Physics PhD student from <a href="physics.rice.edu">Department of Physics and Astronomy, Rice University</a>. I am doing computational condensed matter physics, with a focus on solving frustrated magnetism problems using tensor network states. Please see <a href="./research.html">Research</a> page for more details about my research interests. In my leisure time, I enjoy watching and playing soccer, running, bicycling, playing ping-pong, watching anime, and photograph. </p>
+            </div>
+          </div>
+        <!-- <div class="container">
+            <img src="images/yixu.jpeg" alt="photo" width="150" class="image"/> 
+            <p class="text"> Howdy! I am a Physics PhD student from <a href="physics.rice.edu">Department of Physics and Astronomy, Rice University</a>. I am doing computational condensed matter physics, with a focus on solving frustrated magnetism problems using tensor network states. Please see <a href="./research.html">Research</a> page for more details about my research interests. In my leisure time, I enjoy watching and playing soccer, running, bicycling, playing ping-pong, watching anime, and photograph. </p> 
+        </div> -->
+    </section>
+
+    <section id="updates">
+        <h2>Recent Updates</h2>
+        <ul>
+            <li> 05/2024: Our recent work, "Simulating Spin Dynamics of Supersolid States in a Quantum Ising Magnet", is on <a href="https://arxiv.org/abs/2405.05151">arXiv:2405.05151</a>. Comments are very much welcomed!</li>
+        </ul>
+    </section>
+
+    <section id="publication">
+        <h2>Selected Publications</h2>
+        <ul>
+            <li><b>YX</b>*, Sylvain Capponi*, Ji-Yao Chen*, Laurens Vanderstraeten, Juraj Hasik, Andriy H Nevidomskyy, Matthieu Mambrini, Karlo Penc, Didier Poilblanc. Phase diagram of the chiral SU(3) antiferromagnet on the kagome lattice. <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.195153">Phys. Rev. B 108, 195153 (2023)</a>.</li>
+            <li>Shouvik Sur, <b>YX</b>, Shuyi Li, Shou-Shu Gong, Andriy H. Nevidomskyy. Field-Induced Non-BEC Transitions in Frustrated Magnets. <a href="https://link.aps.org/doi/10.1103/PhysRevLett.132.066701">Phys. Rev. Lett. 132, 066701 (2024)</a>.</li>
+            <!-- <li>Shouvik Sur, <b>YX</b>, Shuyi Li, Shou-Shu Gong, Andriy H. Nevidomskyy. Field-Induced Non-BEC Transitions in Frustrated Magnets. <a href="https://link.aps.org/doi/10.1103/PhysRevLett.132.066701">Phys. Rev. Lett. 132, 066701 (2024)</a>.</li> -->
+        </ul>
+    </section>
+
+    <section id="academic">
+        <h2>Other links</h2>
+        <p><a href="https://scholar.google.com/citations?user=77fKO_kAAAAJ&hl=en">Google Scholar</a>, <a href="https://github.com/slowlightx">GitHub</a></p>
+    </section>
 </body>
 </html>

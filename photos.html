@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 150px;
+            text-align: center;
+            background-size: cover;
+            /* background-attachment: fixed;              */
+            background-image: url(./images/photos/duncanhall.JPG);
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            margin: 0 0 10px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        nav {
+            margin: 20px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+        }
+        .container {
+            position: relative;
+            padding:80px;
+            background-color: #fff;
+        }
+        .image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 300px;
+            margin-left: 200px;
+        }
+        .text {
+            position: absolute;
+            left: 10px;
+            top: 20;
+            margin-right: 350px;
+        }
+        .ul1 {
+            margin: -70px -80px;
+            padding: 0 10;
+            margin-right: 260px;
+            list-style: none;
+        }
+        .li1:before { 
+            content: "";
+            border-color: transparent #111;
+            border-style: solid;
+            border-width: 0.35em 0 0.35em 0.45em;
+            display: block;
+            height: 0;
+            width: 0;
+            left: -1.5em;
+            top: 0.9em;
+            position: relative;
+        }
+        .column {
+            float: left;
+            width: 47%;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both; display: table;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="./index.html">About</a>
+        <a href="./research.html">Research</a>
+        <a href="./photos.html">Photograph</a>
+        <a href="./anime.html">Anime</a>        
+        <a href="./contact.html">Contact</a>
+    </nav>
+
+
+    <section id="Campus">
+        <h2>Rice Campus</h2>
+        <div class="row">
+            <div class="column">
+              <img src="./images/photos/rc1.JPG" alt="chairs" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="./images/photos/rc2.JPG" alt="flower" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="./images/photos/rc3.JPG" alt="hall" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="./images/photos/brk2.JPG" alt="brk" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="./images/photos/rc4.jpg" alt="eclipse" style="width:100%">
+            </div>
+          </div>
+    </section>
+
+    <section id="Miami">
+        <h2>Miami</h2>
+        <div class="row">
+            <div class="column">
+              <img src="./images/photos/miami1.JPG" alt="balconyview" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="./images/photos/pi5.JPG" alt="lizzard" style="width:100%">
+            </div>
+            </div>
+        <div class="row">
+            <div class="column">
+              <img src="./images/photos/peanutisland1.JPG" alt="pi1" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="./images/photos/peanutisland3.JPG" alt="pi3" style="width:99%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+              <img src="./images/photos/wynwood1.JPG" alt="wynwood" style="width:100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="./images/photos/pi4.JPG" alt="pi4" style="width:99%">
+            </div>
+            <div class="column">
+                <img src="./images/photos/pi6.JPG" alt="pi6" style="width:99%">
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section id="others">
+        <h2>Unknown</h2>
+        <div class="row">
+            <div class="column">
+              <img src="images/photos/tmc.JPG" alt="tmc" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="images/photos/rc7.jpg" alt="eclipse" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="images/photos/eclipse.jpg" alt="eclipse" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="images/photos/eclipse2.jpg" alt="eclipse2" style="width:100%">
+            </div>
+        </div>    
+    </section>
+</body>
+</html>
