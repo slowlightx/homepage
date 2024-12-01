@@ -135,7 +135,7 @@
 
         <p> In our recent work, motivated by the recent neutron scattering experiments on a quantum Ising magnet K$_2$Co(SeO$_3$)$_2$, we apply our excitation PEPS method to the easy-axis XXZ model on the triangular lattice. From the simulations, we not only find very nice agreement with the experimental data in two energy scales, but also provide straightforward numerical evidence about the multi-spin-flip nature of those observed branches. We expect our method to be straightforwardly generalized to other interesting frustrated spin systems, and are currently working closely with exprimental groups with this technique. </p>
 
-        <p> PS: Here are a few technical aspects. Compared to a previous work <a href="10.1103/PhysRevLett.129.227201">[Chi et al., PRL 129, 227201 (2022)]</a> using coarse-grained PEPS ansatz, our construction of PEPS ansatz turns out to have a MUCH faster convergence with respect to bond dimension. We able able to use $D=3$ to recover their $D=5$ result (e.g., for sublattice spectrum, see <a href="./images/research/comparison_sublat_spec.jpg">here</a>). Also, compared with $1/D$ extrapolation, we believe that $1/\xi$ extrapolation is a more reliable and universal way for finite-bond-dimension scaling analysis. </p>
+        <p> PS: Here are a few technical aspects. Compared to a previous work <a href="10.1103/PhysRevLett.129.227201">[Chi et al., PRL 129, 227201 (2022)]</a> using coarse-grained PEPS ansatz, our construction of PEPS ansatz turns out to have a MUCH faster convergence with respect to bond dimension. We are able to use $D=3$ to recover their $D=5$ result (e.g., for sublattice spectrum, see <a href="./images/research/comparison_sublat_spec.jpg">here</a>). Also, compared with $1/D$ extrapolation, we believe that $1/\xi$ extrapolation is a more reliable and universal way for finite-bond-dimension scaling analysis. </p>
 
         <p>[1] <b>YX</b>, Juraj Hasik, Boris Ponsioen, Andriy H. Nevidomskyy. Simulating Spin Dynamics of Supersolid States in a Quantum Ising Magnet. <a href="https://arxiv.org/abs/2405.05151">arXiv:2405.05151</a>.</p>
     
@@ -194,7 +194,7 @@
 
     <section id="elec">
         <h2>Playing with ITensor</h2>
-        <p>I am recently playing with some fermionic models, especially those related to quantum Hall systems, using <a href="https://itensor.org">ITensor</a>. It turns out that with finite DMRG, one can already obtain a few interesting properties for the fractional quantum Hall effect (FQHE), for example, the tower of states corresponding to the $SU(2)_1$ CFT edge spectrum. Given the easy-to-get-started feature of ITensors, it might not be a bad idea to implement the tangent-space-based excitaion MPS with ITensors. </p> 
+        <p>I am recently playing with some fermionic models, especially those related to quantum Hall systems, using <a href="https://itensor.org">ITensor</a>. Due to the gapful feature, one can easily obtain some interesting characterstic properties for the fractional quantum Hall effect (FQHE), for example, the tower of states corresponding to the $SU(2)_1$ CFT edge spectrum. Given the easy-to-get-started feature of ITensors, it might not be a bad idea to implement the tangent-space-based excitaion MPS with ITensors. </p> 
         <img src="images/research/fci_cftspec_su2_1.jpg" alt="cft_su21" style="width:30%" />
     </section>
 
